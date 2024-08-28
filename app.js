@@ -1,0 +1,28 @@
+function encriptar() {
+    let textoUsuario =  document.getElementById("texto__usuario").value;
+    let tituloCuadroSalida = document.getElementById("titulo__cuadro__salida");
+    let parrafoCuadroSalida = document.getElementById("parrafo__cuadro__salida");
+    let ilustracion = document.getElementById("ilustracion");
+
+
+    let textoCifrado = textoUsuario
+     .replace(/e/gi, "enter")
+     .replace(/i/gi, "imes")
+     .replace(/a/gi, "ai")
+     .replace(/o/gi, "ober")
+     .replace(/u/gi, "ufat")
+
+ if (document.getElementById("texto__usuario").value.length != 0) {
+    document.getElementById("texto__usuario").value = textoCifrado;
+    tituloCuadroSalida.textContent = "Texto encriptado con éxito";
+    parrafoCuadroSalida.textContent = ""
+    ilustracion.src = "./imagen/encriptado.jpg";
+ } else {
+    ilustracion.src = "./imagen/ilustracion.png";
+    tituloCuadroSalida.textContent = "Ningún mensaje fue encontrado"
+    parrafoCuadroSalida.textContent = "Ingresa el texto que desees encriptar o desencriptar"
+    alert("Debes ingresar algún texto");
+ }
+
+}
+

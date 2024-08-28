@@ -11,31 +11,30 @@
         <div class="usuario__container">
 
             <div class="cuadro__texto__entrada">
-                <textarea name="texto__usuario" id="texto__usuario" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <textarea name="texto__usuario" id="texto__usuario" cols="30" rows="10" placeholder="Ingrese el texto aquí" class="texto__usuario"></textarea>
+
+                <div class="terminos">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+    
+                <div class="botones">
+                    <button class="boton__encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                    <button class="boton__desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+                </div>
+
             </div>
 
-            <div class="terminos">
-                <p>Solo letras minúsculas y sin acentos</p>
-            </div>
-
-            <div class="botones">
-                <button class="boton__encriptar" type="button" onclick="encriptar()">Encriptar</button>
-                <button class="boton__desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+            <div class="cuadro__texto__salida">
+                <img src="imagen/ilustracion.png" alt="" id="ilustracion">
+    
+                <div class="texto__salida" id="texto__salida">
+                    <h2 id="titulo__cuadro__salida">Ningún mensaje fue encontrado</h2>
+                    <p id="parrafo__cuadro__salida">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+    
             </div>
 
         </div>
-
-        <div class="cuadro__texto__salida">
-            <img src="" alt="" id="ilustracion">
-
-            <div class="texto__salida" id="texto__salida">
-                <h2 id="titulo__cuadro__salida">Ningun mensaje encontrado</h2>
-                <p id="parrafo__cuadro__salida">Ingresa el texto que desees encriptar o desencriptar</p>
-                <textarea name="respuesta" id="respuesta" cols="30" rows="10" class="respuesta"></textarea>
-            </div>
-
-        </div>
-        
         
     </body>
     <script src="app.js"></script>
