@@ -176,6 +176,32 @@
     top: 15%;
 }
 
+.copiar {
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    border-radius: 24px;
+    font-family: "Inter";
+    line-height: 19px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: #0a3871;
+    border: 1px solid #0a3871;
+    background: #d8dfe8;
+    display: none;
+}
+
+.copiar:hover {
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+    background: #f3f5fc;
+}
+
 /* Diseño responsivo */
 
 @media (max-width: 57.5em) {
@@ -241,6 +267,82 @@
         top: 0;
         display: none;
         visibility: hidden;
+    }
+
+    .copiar {
+        margin: 0%;
+        display: none;
+    }
+    
+}
+
+@media (max-width: 550px) {
+    .usuario__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cuadro__texto__entrada {
+        width: 100%;
+    }
+
+    .texto__usuario{
+        width: 80%;
+        height: 50%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .terminos {
+        width: 80%;
+        left: 10%;
+        top: 57%;
+    }
+
+    .terminos p {
+        font-size: 16px;
+    }
+
+    .botones {
+        width: 80%;
+        left: 10%;
+        top: 60%;
+    }
+
+    .boton__encriptar,
+    .boton__desencriptar {
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .boton__encriptar:hover,
+    .boton__desencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+
+    .cuadro__texto__salida {
+        width: 80%;
+        height: 28%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .texto__salida {
+        width: 100%;
+        top: 3%;  
+    }
+
+    .cuadro__texto__salida img {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+
+    .copiar {
+        margin: 0%;
+        display: none;
     }
     
 }
