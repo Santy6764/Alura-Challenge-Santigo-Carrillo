@@ -26,3 +26,28 @@ function encriptar() {
 
 }
 
+function desencriptar() {
+    let textoUsuario =  document.getElementById("texto__usuario").value;
+    let tituloCuadroSalida = document.getElementById("titulo__cuadro__salida");
+    let parrafoCuadroSalida = document.getElementById("parrafo__cuadro__salida");
+    let ilustracion = document.getElementById("ilustracion");
+
+    let textoCifrado = textoUsuario
+    .replace(/enter/gi, "e")
+    .replace(/imes/gi, "i")
+    .replace(/ai/gi, "a")
+    .replace(/ober/gi, "o")
+    .replace(/ufat/gi, "u")
+
+    if (document.getElementById("texto__usuario").value.length != 0) {
+        document.getElementById("texto__usuario").value = textoCifrado;
+        tituloCuadroSalida.textContent = "Texto desencriptado con éxito";
+        parrafoCuadroSalida.textContent = ""
+        ilustracion.src = "./imagen/encriptado.jpg";
+     } else {
+        ilustracion.src = "./imagen/ilustracion.png";
+        tituloCuadroSalida.textContent = "Ningún mensaje fue encontrado"
+        parrafoCuadroSalida.textContent = "Ingresa el texto que desees encriptar o desencriptar"
+        alert("Debes ingresar algún texto");
+    }
+}
